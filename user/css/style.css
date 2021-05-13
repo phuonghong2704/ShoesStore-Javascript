@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Lato ;
+}
+@font-face{
+    font-family: Lato;
+    src: url(../font/Lato-Regular.ttf);
+}
+.nav-link{
+    font-size: 1.2rem;
+    margin-right: 2rem;
+}
+.nav-link i{
+    font-size: 1.4rem;
+}
+.navbar-nav{
+    margin: 0 auto;
+}
+.list-group-item{
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+}
+.btnp{
+    width: 100%;
+}
+.center{
+    margin: auto;
+}
+.text-right{
+    text-align: right;
+}
+.border{
+    border-radius: 25%;
+}
+.btndk{
+    margin-left: 1.5rem;
+}
+.ml-5{
+    margin-left: 5rem;
+}

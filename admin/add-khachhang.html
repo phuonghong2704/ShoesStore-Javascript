@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shoes</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <article class="container-fluid row mt-5 mb-5 d-flex justify-content-around align-items-center ">
+        <div class="col-md-8 col-12 p-5 border border-2 rounded">
+            <h2 class="mb-3">Thêm khách hàng</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="" class="form-label">ID khách hàng</label>
+                    <input type="number" class="form-control" id="id" name="id">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Level</label>
+                    <select name="level" id="level" class="form-control">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success mt-3">Add User</button>
+            </form>
+        </div>
+    </article>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

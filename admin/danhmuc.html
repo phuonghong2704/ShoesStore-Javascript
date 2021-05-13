@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shoes</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="row mt-3">
+        <div class=" col-11 container-fluid">
+            <h2>Quản lý danh mục</h2>
+            <div class="card mt-3">
+                <div class="card-header">
+                    <div class="button1">
+                        <button type="button" target="iframe" type="button" class="btn btn-primary"
+                            data-bs-toggle="modal" data-bs-target="#addCate">Thêm Danh Mục</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th scope="col">ID danh mục</th>
+                                <th scope="col">Tên danh mục</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableProduct">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer d-flex justify-content-start">
+                    <div class="button1">
+                        <button type="button" class="btn btn-primary">Chọn tất cả</button>
+                        <button type="button" class="btn btn-primary">Bỏ chọn tất cả</button>
+                        <button type="button" class="btn btn-primary">Xóa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add form -->
+    <div class="modal fade" id="addCate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <article class="container-fluid row mt-5 mb-5 d-flex justify-content-around align-items-center ">
+                        <div class="col-md-8 col-12 p-5 border border-2 rounded">
+                            <h2 class="mb-3">Thêm Danh Mục</h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">ID danh mục</label>
+                                    <input type="number" class="form-control" id="id" name="id">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Tên danh mục</label>
+                                    <input type="text" class="form-control" id="name" name="name">
+                                </div>
+                            </form>
+                        </div>
+                    </article>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="add-btn" data-bs-dismiss="modal">Add
+                        Category</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Edit Form-->
+    <div class="modal fade" id="editCata" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <article class="container-fluid row mt-5 mb-5 d-flex justify-content-around align-items-center ">
+                        <div class="col-md-8 col-12 p-5 border border-2 rounded">
+                            <h2 class="mb-3">Sửa danh mục</h2>
+                            <form id="editForm">
+                            </form>
+                        </div>
+                    </article>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="update-btn">Update
+                        Category</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/danhmuc.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

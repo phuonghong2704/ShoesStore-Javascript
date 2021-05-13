@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shoes</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="row mt-3">
+        <div class=" col-11 container-fluid">
+            <h2>Quản lý sản phẩm</h2>
+            <div class="card mt-3">
+                <div class="card-header d-flex justify-content-between align-items-center row">
+                    <div class="button1 col-4">
+                        <button type="button" target="iframe" type="button" class="btn btn-primary"
+                            data-bs-toggle="modal" data-bs-target="#addProduct">Thêm Sản
+                            Phẩm</button>
+                    </div>
+                    <form class="d-flex col-6">
+                        <input class="form-control me-2" type="search" placeholder="Tìm kiếm theo tên"
+                            aria-label="Search" id="search" onkeyup="searchProduct(this)">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped" id="tableProduct">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th scope="col">#</th>
+                                <th scope="col">Tên sản phẩm</th>
+                                <th scope="col">Danh mục</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Mô tả</th>
+                                <th scope="col">Hình ảnh</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                    <div class="button1">
+                        <button type="button" class="btn btn-primary">Chọn tất cả</button>
+                        <button type="button" class="btn btn-primary">Bỏ chọn tất cả</button>
+                        <button type="button" class="btn btn-primary">Xóa</button>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add product -->
+    <div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <article class="container-fluid row mt-5 mb-5 d-flex justify-content-around align-items-center ">
+                        <div class="col-md-8 col-12 p-5 border border-2 rounded">
+                            <h2 class="mb-3">Thêm sản phẩm</h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Id Sản Phẩm</label>
+                                    <input type="number" class="form-control" id="id" name="id">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Tên Danh Mục</label>
+                                    <input type="text" class="form-control" id="idCata" name="idCata">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Tên sản phẩm</label>
+                                    <input type="text" class="form-control" id="name" name="name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Giá</label>
+                                    <input type="number" class="form-control" id="price" name="price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Mô tả</label>
+                                    <textarea type="text" class="form-control" id="description"
+                                        name="description"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Hình ảnh</label>
+                                    <input type="text" class="form-control" id="image" name="image">
+                                </div>
+                            </form>
+                        </div>
+                    </article>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="add-btn" data-bs-dismiss="modal">Add
+                        Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Remove product -->
+    <div class="modal fade" id="remove" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có muốn xóa?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit product -->
+    <div class="modal fade" id="editProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <article class="container-fluid row mt-5 mb-5 d-flex justify-content-around align-items-center ">
+                        <div class="col-md-8 col-12 p-5 border border-2 rounded">
+                            <h2 class="mb-3">Sửa sản phẩm</h2>
+                            <form id="editForm">
+                                <!-- <div class="mb-3">
+                                    <label for="" class="form-label">ID Sản Phẩm</label>
+                                    <input type="number" class="form-control" id="id" name="id" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Tên sản phẩm</label>
+                                    <input type="text" class="form-control" id="name" name="name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Giá</label>
+                                    <input type="number" class="form-control" id="price" name="price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Số lượng</label>
+                                    <input type="number" class="form-control" id="quality" name="quality">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Mô tả</label>
+                                    <textarea type="text" class="form-control" id="description"
+                                        name="description"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Hình ảnh</label>
+                                    <input type="file" class="form-control" id="image" name="image">
+                                </div> -->
+                            </form>
+                        </div>
+                    </article>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="update-btn">Update
+                        Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/sanpham.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shoes</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img class="navbar-brand logo" src="./images/logo.png" width="60rem" href="index.html"></img>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="fsalse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                </ul>
+                <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll d-flex" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Trang người dùng</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="far fa-envelope"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fas fa-bell"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Main-->
+    <div class="row d-flex justify-content-start ">
+        <div class="col-2 colleft bg-light border">
+            <nav class="navbar navbar-light bg-light mt-3">
+                <ul class="navbar-nav my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="trangchu.html" target="iframe">Trang chủ</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="danhmuc.html" target="iframe">Danh mục</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="sanpham.html" target="iframe">Sản phẩm</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="donhang.html" target="iframe">Đơn hàng</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="thongke.html" target="iframe">Thống kê</a>
+                    </li>
+                </ul>
+        </div>
+        </nav>
+        <iframe class="col-sm-10" name="iframe" src="trangchu.html"></iframe>
+    </div>
+
+    <footer>
+        <div class="card text-center">
+            <div class="card-header p-3 mb-2 bg-secondary text-white">
+                SHOES STORE
+            </div>
+    </footer>
+
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

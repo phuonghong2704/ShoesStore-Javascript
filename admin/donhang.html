@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shoes</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="row mt-3">
+        <div class=" col-11 container-fluid">
+            <h2>Quản lý đơn hàng</h2>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th scope="col">Mã đơn hàng</th>
+                                <th scope="col">Tên khách hàng</th>
+                                <th scope="col">Địa chỉ</th>
+                                <th scope="col">Số điện thoại</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableProduct">
+                            <!-- <tr>
+                                <td><input type="checkbox" name="check"></td>
+                                <th scope="row">1</th>
+                                <td>hong2704</td>
+                                <td>205/56A Thoại Ngọc Hầu, Phương Phú Thạnh, Quận Tân Phú, TP.HCM</td>
+                                <td>0949139077</td>
+                                <td>
+                                    <button type="button" class="btn btn-info">Chi tiết</button>
+                                    <button type="button" class="btn btn-danger">Xóa</button>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                    <div class="button1">
+                        <button type="button" class="btn btn-primary">Chọn tất cả</button>
+                        <button type="button" class="btn btn-primary">Bỏ chọn tất cả</button>
+                        <button type="button" class="btn btn-primary">Xóa</button>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail -->
+    <div class="modal fade" id="showDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th scope="col">Mã chi tiết đơn hàng</th>
+                                <th scope="col">ID sản phẩm</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col">Đơn giá</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableDetail">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/donhang.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

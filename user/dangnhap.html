@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shoes</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img class="navbar-brand" src="./images/logo.png" width="60rem" href="index.html"></img>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="sanpham-danhmuc.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="giohang.html" tabindex="-1" aria-disabled="true">Giỏ hàng</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Người dùng
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Quản trị</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="dangnhap.html">Đăng nhập</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="dangky.html">Đăng ký</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <article class="container-fluid row mt-5 mb-5 d-flex justify-content-around align-items-center ">
+        <div class="col-md-5 col-12 p-5 border border-2 rounded">
+            <h2 class="mb-3">Đăng nhập</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="" class="form-label">Tài khoản</label>
+                    <input type="text" class="form-control" id="username">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+                <span class="mr-3">Nếu bạn chưa có tài khoản!</span>
+                <button type="submit" class="btndk btn btn-info">Đăng ký</button><br>
+                <button type="submit" class="btn btn-success mt-3">Đăng nhập</button>
+            </form>
+        </div>
+    </article>
+
+    <footer>
+        <div class="card text-center mt-5">
+            <div class="card-header p-3 mb-2 bg-secondary text-white">
+                SHOES STORE
+            </div>
+            <div class="card-body bg-light">
+                <h5 class="card-title">Liên hệ với chúng tôi</h5>
+                <p class="card-text">205/56A Thoại Ngọc Hầu, Phương Phú Thạnh, Quận Tân Phú, Thành phố Hồ Chí Minh.</p>
+            </div>
+            <div class="card-footer p-3 mb-2 bg-secondary text-white">
+                FPT-Polytechnic
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

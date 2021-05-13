@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shoes</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <article class="container-fluid row mt-5 mb-5 d-flex justify-content-around align-items-center ">
+        <div class="col-md-8 col-12 p-5 border border-2 rounded">
+            <h2 class="mb-3">Sửa sản phẩm</h2>
+            <form id="editProduct">
+                <div class="mb-3">
+                    <label for="" class="form-label">ID Sản Phẩm</label>
+                    <input type="number" class="form-control" id="id" name="id" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Tên sản phẩm</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Giá</label>
+                    <input type="number" class="form-control" id="price" name="price">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Số lượng</label>
+                    <input type="number" class="form-control" id="quality" name="quality">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Mô tả</label>
+                    <textarea type="text" class="form-control" id="description" name="description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Hình ảnh</label>
+                    <input type="file" class="form-control" id="image" name="image">
+                </div>
+                <button type="submit" class="btn btn-success mt-3">Update Product</button>
+            </form>
+        </div>
+    </article>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

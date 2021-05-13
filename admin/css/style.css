@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Lato ;
+}
+@font-face{
+    font-family: Lato;
+    src: url(../font/Lato-Regular.ttf);
+}
+.nav-link{
+    font-size: 1.2rem;
+    margin-right: 2rem;
+}
+.nav-link i{
+    font-size: 1.4rem;
+}
+
+.list-group-item{
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+}
+.btnp{
+    width: 100%;
+}
+.center{
+    margin: auto;
+}
+.text-right{
+    text-align: right;
+}
+.btndk{
+    margin-left: 1.5rem;
+}
+.colleft{
+    height: 80vh;
+}
+.navbar-nav{
+    margin-left: 2.5rem;
+}
+.logo{
+    margin-left: 2rem;
+}
+.button1{
+    margin: 0;
+}
+#box-add{
+    display: none;
+}
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shoes</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="row mt-3">
+        <div class=" col-11 container-fluid">
+            <h2>Thống kê</h2>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="check"></td>
+                                <th scope="row">1</th>
+                                <td>Sản phẩm theo danh mục</td>
+                                <td>
+                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                        data-bs-target="#chartByCata" id="chartCata">Xem</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="check"></td>
+                                <th scope="row">2</th>
+                                <td>Sản phẩm theo lượt View</td>
+                                <td>
+                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                        data-bs-target="#chartByView">Xem</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer d-flex justify-content-start">
+                    <div class="button1">
+                        <button type="button" class="btn btn-primary">Chọn tất cả</button>
+                        <button type="button" class="btn btn-primary">Bỏ chọn tất cả</button>
+                        <button type="button" class="btn btn-primary">Xóa</button>
+                        <button type="button" class="btn btn-primary">Thêm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Detail -->
+    <div class="modal fade" id="chartByCata" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div>
+                        <canvas id="productsByCata"></canvas>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail -->
+    <div class="modal fade" id="chartByView" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div>
+                        <canvas id="productByView"></canvas>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/chart.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
